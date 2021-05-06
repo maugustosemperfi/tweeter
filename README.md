@@ -6,6 +6,10 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Powerful, Extensible Dev Tools**
 
+## Description
+
+MFE project using NX as workspace and Angular at the frontend framework
+
 ## Development server
 
 Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
