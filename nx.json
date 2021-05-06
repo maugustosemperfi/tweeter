@@ -13,9 +13,7 @@
   },
   "projects": {
     "feed": { "tags": [] },
-    "feed-e2e": { "tags": [], "implicitDependencies": ["feed"] },
     "header": { "tags": [] },
-    "header-e2e": { "tags": [], "implicitDependencies": ["header"] },
     "tweeter-ui": { "tags": [] },
     "tweeter-data": { "tags": [] }
   }

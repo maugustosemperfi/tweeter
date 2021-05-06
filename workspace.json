@@ -93,34 +93,6 @@
         }
       }
     },
-    "feed-e2e": {
-      "root": "apps/feed-e2e",
-      "sourceRoot": "apps/feed-e2e/src",
-      "projectType": "application",
-      "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/feed-e2e/cypress.json",
-            "tsConfig": "apps/feed-e2e/tsconfig.e2e.json",
-            "devServerTarget": "feed:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "feed:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/feed-e2e/**/*.{js,ts}"
-            ]
-          }
-        }
-      }
-    },
     "header": {
       "projectType": "application",
       "root": "apps/header",
@@ -209,34 +181,6 @@
           "options": {
             "jestConfig": "apps/header/jest.config.js",
             "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "header-e2e": {
-      "root": "apps/header-e2e",
-      "sourceRoot": "apps/header-e2e/src",
-      "projectType": "application",
-      "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/header-e2e/cypress.json",
-            "tsConfig": "apps/header-e2e/tsconfig.e2e.json",
-            "devServerTarget": "header:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "header:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/header-e2e/**/*.{js,ts}"
-            ]
           }
         }
       }
