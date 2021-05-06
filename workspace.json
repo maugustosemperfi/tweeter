@@ -240,6 +240,60 @@
           }
         }
       }
+    },
+    "tweeter-ui": {
+      "projectType": "library",
+      "root": "libs/tweeter-ui",
+      "sourceRoot": "libs/tweeter-ui/src",
+      "prefix": "tweeter",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tweeter-ui/src/**/*.ts",
+              "libs/tweeter-ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/tweeter-ui"
+          ],
+          "options": {
+            "jestConfig": "libs/tweeter-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "tweeter-data": {
+      "projectType": "library",
+      "root": "libs/tweeter-data",
+      "sourceRoot": "libs/tweeter-data/src",
+      "prefix": "tweeter",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tweeter-data/src/**/*.ts",
+              "libs/tweeter-data/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/tweeter-data"
+          ],
+          "options": {
+            "jestConfig": "libs/tweeter-data/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
