@@ -1,223 +1,43 @@
 {
   "version": 2,
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
   "projects": {
-    "feed": {
-      "projectType": "application",
-      "root": "apps/feed",
-      "sourceRoot": "apps/feed/src",
-      "prefix": "tweeter",
-      "targets": {
-        "build": {
-          "executor": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/feed",
-            "index": "apps/feed/src/index.html",
-            "main": "apps/feed/src/main.ts",
-            "polyfills": "apps/feed/src/polyfills.ts",
-            "tsConfig": "apps/feed/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "apps/feed/src/favicon.ico",
-              "apps/feed/src/assets"
-            ],
-            "styles": [
-              "apps/feed/src/styles.scss"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/feed/src/environments/environment.ts",
-                  "with": "apps/feed/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "executor": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "feed:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "feed:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "executor": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "feed:build"
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/feed/src/**/*.ts",
-              "apps/feed/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/feed"
-          ],
-          "options": {
-            "jestConfig": "apps/feed/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "header": {
-      "projectType": "application",
-      "root": "apps/header",
-      "sourceRoot": "apps/header/src",
-      "prefix": "tweeter",
-      "targets": {
-        "build": {
-          "executor": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/header",
-            "index": "apps/header/src/index.html",
-            "main": "apps/header/src/main.ts",
-            "polyfills": "apps/header/src/polyfills.ts",
-            "tsConfig": "apps/header/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "apps/header/src/favicon.ico",
-              "apps/header/src/assets"
-            ],
-            "styles": [
-              "apps/header/src/styles.scss"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/header/src/environments/environment.ts",
-                  "with": "apps/header/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "executor": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "header:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "header:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "executor": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "header:build"
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/header/src/**/*.ts",
-              "apps/header/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/header"
-          ],
-          "options": {
-            "jestConfig": "apps/header/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "tweeter-ui": {
-      "projectType": "library",
-      "root": "libs/tweeter-ui",
-      "sourceRoot": "libs/tweeter-ui/src",
-      "prefix": "tweeter",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/tweeter-ui/src/**/*.ts",
-              "libs/tweeter-ui/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/tweeter-ui"
-          ],
-          "options": {
-            "jestConfig": "libs/tweeter-ui/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "tweeter-data": {
       "projectType": "library",
       "root": "libs/tweeter-data",
       "sourceRoot": "libs/tweeter-data/src",
       "prefix": "tweeter",
       "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/tweeter-data/tsconfig.lib.json",
+            "project": "libs/tweeter-data/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/tweeter-data/tsconfig.lib.prod.json"
+            }
+          }
+        },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
@@ -238,26 +58,45 @@
           }
         }
       }
-    }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "generators": {
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
     },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
+    "tweeter-ui": {
+      "projectType": "library",
+      "root": "libs/tweeter-ui",
+      "sourceRoot": "libs/tweeter-ui/src",
+      "prefix": "tweeter",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/tweeter-ui/tsconfig.lib.json",
+            "project": "libs/tweeter-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/tweeter-ui/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/tweeter-ui/src/**/*.ts",
+              "libs/tweeter-ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/tweeter-ui"
+          ],
+          "options": {
+            "jestConfig": "libs/tweeter-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
-  },
-  "defaultProject": "feed"
+  }
 }

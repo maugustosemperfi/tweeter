@@ -15,8 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tweeter/tweeter-ui": ["libs/tweeter-ui/src/index.ts"],
-      "@tweeter/tweeter-data": ["libs/tweeter-data/src/index.ts"]
+      "tweeter": ["libs/publishable/src/index.ts"],
+      "@tweeter/data": ["libs/tweeter-data/src/index.ts"],
+      "@tweeter/ui": ["libs/tweeter-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
