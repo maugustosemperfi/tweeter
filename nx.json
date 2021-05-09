@@ -11,5 +11,10 @@
       "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
-  "projects": { "tweeter-data": { "tags": [] }, "tweeter-ui": { "tags": [] } }
+  "projects": {
+    "tweeter-data": { "tags": [] },
+    "tweeter-ui": { "tags": [] },
+    "feed": { "tags": [] },
+    "feed-e2e": { "tags": [], "implicitDependencies": ["feed"] }
+  }
 }
