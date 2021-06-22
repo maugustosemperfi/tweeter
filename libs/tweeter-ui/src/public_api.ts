@@ -1,2 +1,2 @@
-export * from '@tweeter/ui/src/lib/tweet-card';
-export * from '@tweeter/ui/src/lib/material';
+export * from './lib/tweet-card';
+export * from './lib/material';

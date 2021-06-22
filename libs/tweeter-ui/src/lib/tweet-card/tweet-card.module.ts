@@ -5,7 +5,7 @@ import { TweetCardComponent } from './tweet-card.component';
 
 @NgModule({
   imports: [MatCardModule],
-  exports: [],
+  exports: [TweetCardComponent],
   declarations: [TweetCardComponent],
 })
 export class TweetCardModule {}

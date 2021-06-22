@@ -1,8 +1,6 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
+  "cli": { "defaultCollection": "@nrwl/angular" },
   "generators": {
     "@nrwl/angular:application": {
       "style": "scss",
@@ -16,9 +14,7 @@
       "linter": "eslint",
       "unitTestRunner": "jest"
     },
-    "@nrwl/angular:component": {
-      "style": "scss"
-    }
+    "@nrwl/angular:component": { "style": "scss" }
   },
   "projects": {
     "tweeter-data": {
@@ -50,9 +46,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/tweeter-data"
-          ],
+          "outputs": ["coverage/libs/tweeter-data"],
           "options": {
             "jestConfig": "libs/tweeter-data/jest.config.js",
             "passWithNoTests": true
@@ -89,9 +83,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/tweeter-ui"
-          ],
+          "outputs": ["coverage/libs/tweeter-ui"],
           "options": {
             "jestConfig": "libs/tweeter-ui/jest.config.js",
             "passWithNoTests": true
@@ -114,13 +106,8 @@
             "polyfills": "apps/feed/src/polyfills.ts",
             "tsConfig": "apps/feed/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/feed/src/favicon.ico",
-              "apps/feed/src/assets"
-            ],
-            "styles": [
-              "apps/feed/src/styles.scss"
-            ],
+            "assets": ["apps/feed/src/favicon.ico", "apps/feed/src/assets"],
+            "styles": ["apps/feed/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -155,20 +142,14 @@
         },
         "serve": {
           "executor": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "feed:build"
-          },
+          "options": { "browserTarget": "feed:build" },
           "configurations": {
-            "production": {
-              "browserTarget": "feed:build:production"
-            }
+            "production": { "browserTarget": "feed:build:production" }
           }
         },
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "feed:build"
-          }
+          "options": { "browserTarget": "feed:build" }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
@@ -181,9 +162,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/feed"
-          ],
+          "outputs": ["coverage/apps/feed"],
           "options": {
             "jestConfig": "apps/feed/jest.config.js",
             "passWithNoTests": true
@@ -204,18 +183,12 @@
             "devServerTarget": "feed:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "feed:serve:production"
-            }
+            "production": { "devServerTarget": "feed:serve:production" }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/feed-e2e/**/*.{js,ts}"
-            ]
-          }
+          "options": { "lintFilePatterns": ["apps/feed-e2e/**/*.{js,ts}"] }
         }
       }
     }

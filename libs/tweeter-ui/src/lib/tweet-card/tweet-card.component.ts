@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'tweeter-tweet-card',
   templateUrl: 'tweet-card.component.html',
 })
-export class TweetCardComponent {}
+export class TweetCardComponent {
+  @Input()
+  description!: string;
+}
