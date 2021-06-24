@@ -7,9 +7,10 @@ import { TweetCardHeaderComponent } from './components/tweet-card-header/tweet-c
 import { TweetCardFooterComponent } from './components/tweet-card-footer/tweet-card-footer.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  imports: [MatCardModule, FlexLayoutModule, MatIconModule],
+  imports: [MatCardModule, FlexLayoutModule, MatIconModule, MatButtonModule],
   exports: [
     TweetCardComponent,
     TweetCardContentComponent,
