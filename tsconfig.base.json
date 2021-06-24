@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@tweeter/data": ["libs/tweeter-data/src/index.ts"],
-      "@tweeter/ui": ["libs/tweeter-ui/src/index.ts"]
+      "@tweeter/ui": ["libs/tweeter-ui/src/index.ts"],
+      "@tweeter/tweeter-ui": ["libs/tweeter-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

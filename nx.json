@@ -13,8 +13,8 @@
   },
   "projects": {
     "tweeter-data": { "tags": [] },
-    "tweeter-ui": { "tags": [] },
     "feed": { "tags": [] },
-    "feed-e2e": { "tags": [], "implicitDependencies": ["feed"] }
+    "feed-e2e": { "tags": [], "implicitDependencies": ["feed"] },
+    "tweeter-ui": { "tags": [] }
   }
 }

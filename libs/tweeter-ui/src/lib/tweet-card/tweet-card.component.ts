@@ -5,6 +5,4 @@ import { Component, Input } from '@angular/core';
   templateUrl: 'tweet-card.component.html',
 })
 export class TweetCardComponent {
-  @Input()
-  description!: string;
 }

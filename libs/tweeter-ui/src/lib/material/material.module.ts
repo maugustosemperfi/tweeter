@@ -54,7 +54,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatIconModule,
     MatDialogModule,
     MatTooltipModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   declarations: [],
 })

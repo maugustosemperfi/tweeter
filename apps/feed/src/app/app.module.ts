@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot(
       [
         {
-          path: 'feed',
+          path: '',
           loadChildren: () =>
             import('./modules/feed/feed.module').then((m) => m.FeedModule),
         },
