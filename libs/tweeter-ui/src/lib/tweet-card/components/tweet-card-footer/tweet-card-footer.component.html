@@ -1,5 +1,5 @@
-<div fxLayout="row">
-  <div fxFlex="100">
+<div fxLayout="row wrap">
+  <div fxFlex="100" class="button-container">
     <button mat-stroked-button fxFlex="25">
       <mat-icon>favorite</mat-icon>
       Comments
@@ -17,5 +17,14 @@
       Saved
     </button>
   </div>
-  <div fxFlex="100"></div>
+  <div fxFlex="100" class="reply-container" fxLayoutAlign="center center">
+    <img
+      src="https://image.flaticon.com/icons/png/512/147/147144.png"
+      class="reply-avatar"
+    />
+    <mat-form-field fxFlex appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput />
+    </mat-form-field>
+  </div>
 </div>

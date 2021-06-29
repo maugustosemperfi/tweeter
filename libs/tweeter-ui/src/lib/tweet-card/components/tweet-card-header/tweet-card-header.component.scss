@@ -6,11 +6,16 @@
 
 .card-title {
   margin-bottom: 0;
+  font-size: 16px;
+}
+
+.card-subtitle {
+  font-size: 14px;
 }
 
 .mat-card-avatar {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   font-size: 40px;
   padding-right: 12px;
 }

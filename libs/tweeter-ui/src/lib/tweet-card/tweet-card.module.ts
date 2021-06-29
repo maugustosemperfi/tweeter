@@ -8,9 +8,18 @@ import { TweetCardFooterComponent } from './components/tweet-card-footer/tweet-c
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  imports: [MatCardModule, FlexLayoutModule, MatIconModule, MatButtonModule],
+  imports: [
+    MatCardModule,
+    FlexLayoutModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
+  ],
   exports: [
     TweetCardComponent,
     TweetCardContentComponent,
