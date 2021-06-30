@@ -7,6 +7,11 @@ import { FeedComponent } from './feed.component';
 import { TweetCardModule } from '@tweeter/ui';
 import { TweetComponent } from './components/tweet/tweet.component';
 import { CreateTweetComponent } from './components/create-tweet/create-tweet.component';
+import { CardModule } from '@tweeter/ui';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 const routes: Routes = [{ path: '', component: FeedComponent }];
 
@@ -17,6 +22,11 @@ const routes: Routes = [{ path: '', component: FeedComponent }];
     FeedRoutingModule,
     RouterModule.forChild(routes),
     TweetCardModule,
+    CardModule,
+    FlexLayoutModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
   ],
 })
 export class FeedModule {}

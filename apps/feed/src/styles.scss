@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.default-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  overflow: auto;
+
+  border-radius: 8px;
+}
