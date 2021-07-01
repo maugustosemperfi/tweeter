@@ -213,7 +213,7 @@
       "projectType": "application",
       "root": "apps/profile",
       "sourceRoot": "apps/profile/src",
-      "prefix": "feed",
+      "prefix": "tprofile",
       "targets": {
         "build": {
           "executor": "@angular-devkit/build-angular:browser",
