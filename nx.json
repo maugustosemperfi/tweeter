@@ -15,6 +15,7 @@
     "tweeter-data": { "tags": [] },
     "feed": { "tags": [] },
     "feed-e2e": { "tags": [], "implicitDependencies": ["feed"] },
-    "tweeter-ui": { "tags": [] }
+    "tweeter-ui": { "tags": [] },
+    "profile": { "tags": [] }
   }
 }

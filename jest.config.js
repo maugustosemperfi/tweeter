@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/libs/tweeter-data',
     '<rootDir>/apps/feed',
     '<rootDir>/libs/tweeter-ui',
+    '<rootDir>/apps/profile',
   ],
 };
