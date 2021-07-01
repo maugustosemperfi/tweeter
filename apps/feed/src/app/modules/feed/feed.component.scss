@@ -1,9 +1,18 @@
 .feed-container {
-  min-width: 300px;
-  max-width: 600px;
-  margin: 50px auto;
+  width: 1200px;
+  margin: 0 auto;
 
-  .create-tweet-container {
-    padding-bottom: 32px;
+  .tweets-container {
+    min-width: 300px;
+    max-width: 800px;
+    margin-right: 32px;
+
+    .create-tweet-container {
+      padding-bottom: 32px;
+    }
+  }
+
+  .trends-container {
+    width: 300px;
   }
 }

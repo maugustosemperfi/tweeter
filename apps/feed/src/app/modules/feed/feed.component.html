@@ -1,7 +1,14 @@
-
-<div fxLayout="column" class="feed-container">
-  <div class="create-tweet-container">
-    <tweeter-create-tweet></tweeter-create-tweet>
+<div fxLayout="row" class="feed-container" fxLayoutAlign="space-between start">
+  <div fxLayout="column" class="tweets-container">
+    <div class="create-tweet-container">
+      <tweeter-create-tweet></tweeter-create-tweet>
+    </div>
+    <div>
+      <tweeter-tweet></tweeter-tweet>
+    </div>
   </div>
-  <tweeter-tweet></tweeter-tweet>
+
+  <div class="trends-container">
+    <tweeter-trends></tweeter-trends>
+  </div>
 </div>

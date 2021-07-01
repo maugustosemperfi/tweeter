@@ -1,3 +1,6 @@
-<mat-card-header class="tui-header-content">
+<mat-card-header
+  class="tui-header-content"
+  [ngClass]="{ 'tui-bottom-line': headerBottomLine }"
+>
   <ng-content></ng-content>
 </mat-card-header>

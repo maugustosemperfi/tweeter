@@ -12,11 +12,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { TrendsComponent } from './components/trends/trends.component';
 
 const routes: Routes = [{ path: '', component: FeedComponent }];
 
 @NgModule({
-  declarations: [FeedComponent, TweetComponent, CreateTweetComponent],
+  declarations: [FeedComponent, TweetComponent, CreateTweetComponent, TrendsComponent],
   imports: [
     CommonModule,
     FeedRoutingModule,

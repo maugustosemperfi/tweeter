@@ -1,0 +1,20 @@
+.trends-container {
+  width: 300px;
+
+  .trends-header {
+    padding-bottom: 8px;
+  }
+
+  .trends-content {
+    padding-top: 8px;
+
+    .card-title {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+
+    .card-subtitle {
+      font-size: 14px;
+    }
+  }
+}

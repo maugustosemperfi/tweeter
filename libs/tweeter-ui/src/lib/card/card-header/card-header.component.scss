@@ -1,5 +1,11 @@
 .tui-header-content {
+  padding-bottom: 8px;
+
   .mat-card-header-text {
     margin: 0 !important;
   }
+}
+
+.tui-bottom-line {
+  border-bottom: 1px solid #bebebe;
 }
