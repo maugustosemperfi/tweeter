@@ -1,0 +1,28 @@
+.bio-card {
+  margin-top: 32px;
+
+  .bio-avatar {
+    position: absolute;
+    margin-top: -40px;
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .bio-content {
+    margin-left: 140px;
+
+    .bio-title {
+      font-size: 22px;
+      margin: 0;
+      padding-right: 48px;
+    }
+
+    .bio-info {
+      font-size: 14px;
+      padding-right: 32px;
+      line-height: 28px;
+    }
+  }
+}
