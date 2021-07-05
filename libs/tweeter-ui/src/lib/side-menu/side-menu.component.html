@@ -1,8 +1,8 @@
-<mat-list>
-  <mat-list-item>
+<mat-nav-list>
+  <a mat-list-item routerLink="/">
     <mat-icon mat-list-icon>home</mat-icon>
-    <a routerLink="" mat-line>Home</a>
-  </mat-list-item>
+    <div mat-line>Home</div>
+  </a>
   <mat-list-item>
     <mat-icon mat-list-icon>tag</mat-icon>
     <div mat-line>Explore</div>
@@ -23,12 +23,12 @@
     <mat-icon mat-list-icon>article</mat-icon>
     <div mat-line>Lists</div>
   </mat-list-item>
-  <mat-list-item >
+  <a mat-list-item routerLink="/profile">
     <mat-icon mat-list-icon>person</mat-icon>
-    <a routerLink="/profile" mat-line>Profile</a>
-  </mat-list-item>
+    <div mat-line>Profile</div>
+  </a>
   <mat-list-item>
     <mat-icon mat-list-icon>more</mat-icon>
     <div mat-line>More</div>
   </mat-list-item>
-</mat-list>
+</mat-nav-list>
