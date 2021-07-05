@@ -24,10 +24,13 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "ngcc --properties es2015 browser module main"
+    "postinstall": "ngcc --properties es2015 browser module main",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
+  "resolutions": { "webpack": "5.0.0"},
   "private": true,
   "dependencies": {
+    "@angular-architects/module-federation": "^12.2.1",
     "@angular/animations": "^11.2.0",
     "@angular/cdk": "11.2",
     "@angular/common": "^11.2.0",

@@ -68,7 +68,7 @@
       "prefix": "tweeter",
       "targets": {
         "build": {
-          "executor": "@angular-devkit/build-angular:browser",
+          "executor": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/apps/feed",
             "index": "apps/feed/src/index.html",
@@ -84,7 +84,9 @@
               "apps/feed/src/styles.scss"
             ],
             "scripts": [],
-            "preserveSymlinks": true
+            "preserveSymlinks": true,
+            "extraWebpackConfig": "apps/feed/webpack.config.js",
+            "commonChunk": false
           },
           "configurations": {
             "production": {
@@ -112,18 +114,22 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "extraWebpackConfig": "apps/feed/webpack.prod.config.js"
             }
           }
         },
         "serve": {
-          "executor": "@angular-devkit/build-angular:dev-server",
+          "executor": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "feed:build"
+            "browserTarget": "feed:build",
+            "extraWebpackConfig": "apps/feed/webpack.config.js",
+            "port": 4200
           },
           "configurations": {
             "production": {
-              "browserTarget": "feed:build:production"
+              "browserTarget": "feed:build:production",
+              "extraWebpackConfig": "apps/feed/webpack.prod.config.js"
             }
           }
         },
@@ -143,13 +149,14 @@
           }
         },
         "test": {
-          "executor": "@nrwl/jest:jest",
+          "executor": "ngx-build-plus:karma",
           "outputs": [
             "coverage/apps/feed"
           ],
           "options": {
             "jestConfig": "apps/feed/jest.config.js",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "extraWebpackConfig": "apps/feed/webpack.config.js"
           }
         }
       }
@@ -216,7 +223,7 @@
       "prefix": "tprofile",
       "targets": {
         "build": {
-          "executor": "@angular-devkit/build-angular:browser",
+          "executor": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/apps/profile",
             "index": "apps/profile/src/index.html",
@@ -231,7 +238,9 @@
             "styles": [
               "apps/profile/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "extraWebpackConfig": "apps/profile/webpack.config.js",
+            "commonChunk": false
           },
           "configurations": {
             "production": {
@@ -259,18 +268,22 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "extraWebpackConfig": "apps/profile/webpack.prod.config.js"
             }
           }
         },
         "serve": {
-          "executor": "@angular-devkit/build-angular:dev-server",
+          "executor": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "profile:build"
+            "browserTarget": "profile:build",
+            "extraWebpackConfig": "apps/profile/webpack.config.js",
+            "port": 4201
           },
           "configurations": {
             "production": {
-              "browserTarget": "profile:build:production"
+              "browserTarget": "profile:build:production",
+              "extraWebpackConfig": "apps/profile/webpack.prod.config.js"
             }
           }
         },
@@ -290,13 +303,14 @@
           }
         },
         "test": {
-          "executor": "@nrwl/jest:jest",
+          "executor": "ngx-build-plus:karma",
           "outputs": [
             "coverage/apps/profile"
           ],
           "options": {
             "jestConfig": "apps/profile/jest.config.js",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "extraWebpackConfig": "apps/profile/webpack.config.js"
           }
         }
       }
